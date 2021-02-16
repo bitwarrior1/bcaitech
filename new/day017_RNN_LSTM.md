@@ -21,7 +21,7 @@
 * 한글자 단위의 모델
 * 추론시 (=테스트) 한 time step의 출력값을 다음 입력값으로 사용하게 된다.
 * RNN BACKPROPAGATION  
-  * 일부 시퀀스로 나누어서 학습을 진행하기도 한다. 한번에 학습하기에는 너무커서!
+  * 일부 시퀀스로 나누어서 학습을 진행하기도 한다. 한번에 학습하기에는 너무커서!, Truncation이라 한다
   * 바닐라 RNN 에서의 vanishing/exploding gradient 문제가 있다.  
     LSTM에서 어느정도 해결된다.
 
