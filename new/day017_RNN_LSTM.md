@@ -62,7 +62,7 @@
 
 * 다음 단어를 예측해서 아웃풋으로 내놓는다.  
 
-* PackedSequence
+* PackedSequence  
   padding이 적용안된 순서부터 계산되도록 정렬해서 pack
   padding 부분은 굳이 계산하지 않도록 하는 방법
   
