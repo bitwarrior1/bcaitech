@@ -52,7 +52,7 @@
 2. next cell state
 3. next hidden state
 
-게이트 단위로 알면 좋다. 3개의 게이트가 있다.
+게이트 단위로 알면 좋다. 4개의 게이트가 있다.
 1. Forget gate : 어떤 정보를 버릴지 결정
 2. Input gate : 어떤 정보를 저장할지 결정
 1과2를 cell state에 update한다 (Update cell)
