@@ -136,8 +136,8 @@ Encoders (stacked)를 거쳐서 Decoders (stacked)로 나온다.
   
   
 * positional encoding   
-  입력값으로 original embedding벡터에 더해지는 벡터이다. position vector 구하는법은 생략.
-  **왜 필요한가?** transformer에 순서에 대한 고려가 없으므로
+  입력값으로 original embedding벡터에 더해지는 벡터이다. position vector 구하는법은 생략.   
+  **왜 필요한가?** transformer에 순서에 대한 고려가 없으므로  
   
 * 그밖에... encoder내부에서 쓰는 기법
   - layerNorm
