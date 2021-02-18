@@ -108,9 +108,12 @@ Encoders (stacked)를 거쳐서 Decoders (stacked)로 나온다.
   그리고 softmax를 거치게한다. 이 값을 attention rate 라고한다.  
   이 값은 이 단어가 자기자신 혹은 다른단어와 얼마나 interactive 해야하는지를 말한다.  
 
-  각 단어별 attention rate와 value를 weighted sum을 한다.(모든 단어의 attention rate가 곱해진 value벡터를모두 더하는 것)  
+  attention rate을 이용해 각 단어별 value에 weighted sum을 한다.(attention rate가 weight이다) (모든 단어의 value벡터에 attention rate를 곱한 후 모두 더하는 것)  
   이 값이 self-attention과정의 결과값이 된다.
-
+  
+  용어 : attention rate(=score), 결과값(=attension value)   
+  
+  
   **주의점)**  
   query 벡터와 key벡터는 항상 차원이 같다. 내적해야 하기 때문이다.  
   self-attention의 최종값은 value 벡터와 차원이 같다.  
