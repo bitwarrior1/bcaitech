@@ -111,7 +111,7 @@ Encoders (stacked)를 거쳐서 Decoders (stacked)로 나온다.
   attention rate을 이용해 각 단어별 value에 weighted sum을 한다.(attention rate가 weight이다) (모든 단어의 value벡터에 attention rate를 곱한 후 모두 더하는 것)  
   이 값이 self-attention과정의 결과값이 된다.
   
-  용어 : attention rate(=score), 결과값(=attension value)   
+  용어 : attention rate(=score), 결과값(=attenstion value)   
   
   
   **주의점)**  
