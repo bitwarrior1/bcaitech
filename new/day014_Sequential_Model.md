@@ -135,7 +135,7 @@ Encoders (stacked)를 거쳐서 Decoders (stacked)로 나온다.
   **그런데! 실제 구현(코드상)에서는 embedding 된 벡터를 나눠서 각 attention head에 넣어준다.**
   
   
-* positional encoding
+* positional encoding   
   입력값으로 original embedding벡터에 더해지는 벡터이다. position vector 구하는법은 생략.
   **왜 필요한가?** transformer에 순서에 대한 고려가 없으므로
   
