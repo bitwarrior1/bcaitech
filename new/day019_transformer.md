@@ -45,19 +45,24 @@
 ### 4. learning rate
 
 * 처음에는 가파른 지점에 있을 수 있으므로 lr을 작게,  
-  그 후 완만한 지점에서는 lr를 크게한다.
+  그 후 완만한 지점에서는 lr를 크게한다.  
   최저점에 도달할 수 록 lr를 다시 줄인다.
 
 ### 5. Decoder  
 
-* 디코더로 오는 input을 encode한다. (= hidden state를 구하는 과정과 같은 개념)
+* 첫번째 sublayer -> masked MHA
+  * 디코더로 오는 input을 encode한다. (= hidden state를 구하는 과정과 같은 개념)
+  
+  * query 벡터를 만든다 (여기는 self-attetion으로 계산)  
+  
+  * masked MHA  
+    행렬상에서 현재 단어보다 뒤에 있는 단어에 해당하는 부분을 0으로 만든다.(구현시 softmax넣기전에 실행)  
+    그 후 다시 합이 1이 되도록 normalization
 
-* 첫번째 sublayer(=masked MHA)에서 query 벡터를 만들고 (여기는 self-attetion으로 계산)  
-  key, value 벡터는 마지막 인코더에서 가져온 후 두번째 sublayer 실행한다.
+* 두번째 sublayer -> MHA
+  query는 이전 layer에서 가져오고 key, value 벡터는 마지막 인코더에서 가져온 후 계산한다.
 
-* masked MHA  
-  행렬상에서 현재 단어보다 뒤에 있는 단어에 해당하는 부분을 0으로 만든다.(구현시 softmax넣기전에 실행)  
-  그 후 다시 합이 1이 되도록 normalization
+* 세번째 sublayer -> Feed Forward
   
 # 하이퍼파라미터
 
