@@ -1,5 +1,34 @@
 # 강의
 
+### 
+
+1. Sequence to Sequence
+
+sequence 형태의 input & output를 갖는다. not share parameters  
+각 RNN 모델은 LSTM를 사용  
+마지막 encoder의 hidden state는 decoder의 처음(0번째) hidden state로 쓴다.  
+decoder의 첫번째 인풋은 SOS토큰, 그리고 EOS 가 나올때가지 단어 생성을 반복한다.  
+
+2. Attention  
+
+문제 : LSTM이 먼거리의 정보를 유실한다.
+
+attention value 구하는 과정 : 
+디코더의 hidden state와 모든 인코더의 hidden state의 내적 -> scalar 값 -> 합쳐서 attention socre -> softmax를 통과시켜서 attention distribution   
+-> 모든 인코더 hidden state에 가중합 (각 인코더 h에 attention distribution을 곱하고 모두 각 인코더 h들을 모두 더한다) -> attetion value (= context vector )  
+
+* dot, general, concat 과 같은 방법들이 있다. 위의 설명은 **dot**방법이다.
+
+이후 출력값 구하는 과정:
+attention value와 디코더의 hiddent state의 concatenate -> linear 변환 -> softmax -> 결과
+
+* decoder hidden state의 2가지 역할
+1. 해당 time step의 아웃풋 계산시
+2. attetion score 구할시
+
+* decorder 학습시에는 ground-truth 제공하기도 한다. (= 이 방법을 **teacher forcing** 이라고 한다),
+  당연히 inference에는 이전 아웃풋사용
+
 ### beam search
 
 지금까지는 greedy decoding방식으로 가장높은 확률의 단어 선택하였다.  
@@ -33,6 +62,7 @@
   또는 EOS에 도달한 hypothesis의 개수를 기준으로 종료한다.
 
 * 최종결과값은 가장 확률높은 hypothesis
+
 
 
 ### BLEU score
