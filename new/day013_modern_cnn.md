@@ -114,6 +114,8 @@ GoogLeNet > AlexNet > VGGNet (깊이)
   1x1 convolution을 앞에 사용해서 파라미터 수를 줄이고
   그 다음에 또 1x1 convolution를 사용해서 원하는 채널,차원을 맞추는데 사용하는 방법
 
+* 보통 Simple Shortcut 사용된다. (Projected Shortcut 보다)
+
 ### DenseNet
 ResNet에서는 더해주지만(addition) DenseNet은 concatenate 한다.  
 concatenate이므로 채널이 기하급수적으로 커진다.(=파라미터수가 증가한다.)  
