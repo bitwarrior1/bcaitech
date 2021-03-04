@@ -64,14 +64,15 @@
 1. 1x1 커널을 사용한 컨볼루션  
   채널을 줄이는 작용을 한다. = 파라미터를 줄인다는 의미와 같다.  
   
-2. Network in Network 구조를 사용했다  
+2. Network in Network 구조를 사용했다.
+   
    1. inception block  
-      하나의 입력이 들어왔을때 여러개의 receptive field를 가지는 필터를 가는 모델을 거치고 다시 합쳐짐. 
-      이득은?
-      1)여러개의 결과들을 합치는 효과도 있다.
+      * 입력이 들어오고 퍼졌다가 다시 합쳐짐
+      * 하나의 입력이 들어왔을때 **여러개의 receptive field** 를 가지는 필터를 가는 모델을 거치고 다시 합쳐짐(=Concatenate). 
+      * 이득은? 여러개의 결과들을 합치는 효과도 있다.
 
    2. inception block 안에서 1x1 컨볼루션 사용
-      1x1 convolution can be seen as channel-wise dimension reduction.  
+      1x1 convolution can be seen as channel-wise dimension reduction.(=채널방향에서 차원을 줄이는 효과)(필터의 가로세로 == special dimention)
       입력값의 채널을 그대로 유지하려면 커널의 갯수도 동일하게 맞춰야한다.  
       그런데 중간에 1x1 을 끼워넣는다고 파라미터의 수가 줄일 수 있다.  
       
@@ -96,9 +97,10 @@ GoogLeNet > AlexNet > VGGNet (깊이)
 
   1) 오버피팅 : 학습데이터에서만 정확성이 증가하고 테스트에서는 감소하는 문제
 
-  2) 학습실패 : 학습과 테스트 모두에서 정확성이 감소하는 문제. (특히 레이어가 깊어짐에 따라서 학습데이터에서만 잘 될것이라는 기대와 반대로)
+  2) 학습실패 : 학습과 테스트 모두에서 정확성이 감소하는 문제. (특히 **레이어**가 깊어짐에 따라서 학습데이터에서만 잘 될것이라는 기대와 반대로)
 
-  여기서 2번을 해결하기 위해서 ResNet에서는 residual connection ( = identity map = skip connection)을 추가하게 된다.
+  * 여기서 2번을 해결하기 위해서 ResNet에서는 residual connection ( = identity map = skip connection)을 추가하게 된다.
+  * 다시말하면 깊은 레이어에서도 ResNet 구조를 사용해서 잘 학습할 수 있게 되었다
       
 * Skip Connection
   convolution layer를 거친 feature map과  
