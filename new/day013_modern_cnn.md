@@ -68,7 +68,7 @@
    
    1. inception block  
       * 입력이 들어오고 퍼졌다가 다시 합쳐짐
-      * 하나의 입력이 들어왔을때 **여러개의 receptive field** 를 가지는 필터를 가는 모델을 거치고 다시 합쳐짐(=Concatenate). 
+      * 하나의 입력이 들어왔을때 **여러개의 receptive field** 를 가지는 필터들을(4개?) 거치고 다시 합쳐짐(=Concatenate). 
       * 이득은? 여러개의 결과들을 합치는 효과도 있다.
 
    2. inception block 안에서 1x1 컨볼루션 사용
