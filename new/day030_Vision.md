@@ -51,8 +51,8 @@
 * 모델 compression로도 볼 수 있다.
 * 사용예
     1. 같은 Input에 대해 teacher와 student의 Output의 차이를 줄인다. KL div. Loss를 이용하고 Student를 수정. label이 필요없으므로 Unsupervised learning.   
-    * Teacher와 Student의 차이를 Ditillation Loss라고 한다
-    2. Ditillation Loss와 label된 데이터를 이용해서 구한 Loss, 이 두 Loss를 이용해서 Student학습
+    * Teacher와 Student의 차이를 Distillation Loss라고 한다
+    2. Distillation Loss와 label된 데이터를 이용해서 구한 Loss, 이 두 Loss를 이용해서 Student학습
     * "soft" prediction : 실수를 갖는 값
     * Temperature
 
