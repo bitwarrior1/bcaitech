@@ -62,8 +62,8 @@
     
 ### 위 세가지 기법을 이용한 self-training
 1. Teacher 모델을 학습시킨다.
-2. Teacher 모델로 unlabeled data에 psedo-label설정해 준다.
-3. 이 데이터를 합쳐서 RandAugment를 진행하고, Student 모델ㅇ,ㄹ 학습한다.
+2. Teacher 모델로 unlabeled data에 psedo-label를 설정해 준다.
+3. 이 데이터를 합쳐서 RandAugment를 진행하고, Student 모델을 학습한다.
 4. Student모델을 Teacher모델로 정하고 다시 반복한다(2번으로)
 * 모델이 점점 커진다.
 
