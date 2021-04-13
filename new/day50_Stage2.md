@@ -7,13 +7,13 @@
  
 * True Positive Rate (TPR)
   * 실제 Positive 중에서 얼마나 positive로 예측했는가.
-  * 맞는예측이다
+  * 맞는예측 비율이다
   * Recall과 동일  
   <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{TP}{TP&space;&plus;&space;FN}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{TP}{TP&space;&plus;&space;FN}" title="\frac{TP}{TP + FN}" /></a>
   
 * False Positive Rate (FPR)
   * 실제 Negative 중에서 얼마나 positive로 예측했는가
-  * 틀린예측이다  
+  * 틀린예측 이다  
   <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{FP}{FP&space;&plus;&space;TN}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{FP}{FP&space;&plus;&space;TN}" title="\frac{FP}{FP + TN}" /></a>
   
 * 일반적으로 TPR은 높아야지, FPR은 낮아야지 좋아보인다.
