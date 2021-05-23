@@ -144,36 +144,3 @@ layer의 statistics를 정교화.
   
   * variances  
   layer norm, instance norm, group norm
-
-
-
-
-  
-  
-
- 
-  
-  
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-  
-  
